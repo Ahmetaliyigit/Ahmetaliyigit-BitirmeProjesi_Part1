@@ -13,19 +13,17 @@ namespace E_Ticaret_Prjesi_AHMT.Controllers
         public int UserId2{ get; set; } = 25;
 
         private readonly ProductServise productservise;
-        private readonly CartServise cartservise;
-        private readonly CartItemServise cartitemservise;
+        
 
         public HomeController()
         {
             productservise = new ProductServise();
-            cartservise = new CartServise();
-            cartitemservise = new CartItemServise();
+          
         }
 
         public async Task<IActionResult> Index()
         {            
-            return View(await productservise.GetallAsync());
+            return View();
         }
 
         public async Task<IActionResult> Shop(int Id) 
@@ -56,9 +54,9 @@ namespace E_Ticaret_Prjesi_AHMT.Controllers
             return View();
         }
 
-
-
-
-
+        public async Task<IActionResult> LoginRegister()
+        {
+            return View();
+        }
     }
 }

@@ -31,6 +31,17 @@ namespace DAL.EfCore
              return await products.ToListAsync();
         }
 
+        public async Task UpdateProductAsync(Product product)
+        {
+            await db.SaveChangesAsync();
+        }
+
+        public async Task AddProductAsync(Product product)
+        {
+            db.Products.Add(product);
+            await db.SaveChangesAsync();
+        }
+
     }
 }
 

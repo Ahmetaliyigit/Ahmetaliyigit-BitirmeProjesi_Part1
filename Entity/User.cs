@@ -21,10 +21,5 @@ namespace Entity
         public string State { get; set; }
         public int ZipCode { get; set; }
 
-        public List<Comment> Comments { get; set; }
-
-
-        public Cart Cart  { get; set; }
-
     }
 }

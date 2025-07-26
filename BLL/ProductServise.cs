@@ -22,5 +22,14 @@ namespace BLL
         {
             return await products.GetAllAsync(filter);
         }
+
+        public async Task UpdateProductAsync(Product product)
+        {
+            await products.UpdateProductAsync(product);
+        }
+        public async Task AddProductAsync(Product product)
+        {
+           await products.AddProductAsync(product);
+        }
     }
 }

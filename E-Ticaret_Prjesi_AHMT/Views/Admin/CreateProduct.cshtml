@@ -1,0 +1,95 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "CreateProduct";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>CreateProduct</h1>
+
+
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateProduct" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"> Ürünün adı </label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"> Açıklaması </label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"> Fiyatı </label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stock" class="control-label"> Stok bilgisi </label>
+                <input asp-for="Stock" class="form-control" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GenderId" class="control-label"> Cinsiyet </label>
+                <select asp-for="GenderId" class="form-control">
+                    <option value="">-- Cinsiyet Seçin --</option>
+                    @foreach (Gender gender in ViewBag.Gender)
+                    {
+                        <option value="@gender.Id">@gender.GenderName</option>
+                    }
+                </select>
+                <span asp-validation-for="GenderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Url" class="control-label"> Fotorafı </label>
+                <input type="file" class="form-control" name="ProductImage" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColorId" class="control-label">Rengi</label>
+                <select asp-for="ColorId" class="form-control">    
+                    <option value="">-- Renk Seçin --</option>
+                    @foreach (Color color in ViewBag.Color)
+                    {
+                        <option value="@color.Id">@color.ColorName</option>
+                    }
+                </select>
+                <span asp-validation-for="ColorId" class="text-danger"></span>
+            </div>    
+            <div class="form-group">
+                <label asp-for="Size" class="control-label"> Bedeni </label>
+                <input asp-for="Size" class="form-control" />
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"> Kategorisi </label>
+                <select asp-for="CategoryId" class="form-control">
+                    <option value="">-- Kategori Seçin --</option>
+                    @foreach (Category category in ViewBag.Category)
+                    {
+                        <option value="@category.Id">@category.CategoryName</option>
+                    }
+                </select>         
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

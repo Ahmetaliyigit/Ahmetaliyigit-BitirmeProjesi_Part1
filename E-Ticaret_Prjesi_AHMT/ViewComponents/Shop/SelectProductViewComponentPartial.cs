@@ -6,11 +6,11 @@ namespace E_Ticaret_Prjesi_AHMT.ViewComponents.Shop
 {
     public class SelectProductViewComponentPartial : ViewComponent
     {
-        private readonly ProductServise productservise;
+        private readonly ProductService productservise;
 
-        public SelectProductViewComponentPartial()
+        public SelectProductViewComponentPartial(ProductService servise)
         {
-            productservise = new ProductServise();
+            productservise = servise;
         }
 
         public async Task<IViewComponentResult> InvokeAsync(int Id)

@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace DAL.EfCore
 {
-    public class ProductDal
+    public class ProductDAL
     {
         private readonly DataContext db;
 
-        public ProductDal()
+        public ProductDAL(DataContext context)
         {
-            db = new DataContext();
+            db = context;
         }
 
         public async Task<List<Product>> GetAllAsync(Expression<Func<Product,bool>> filter=null)

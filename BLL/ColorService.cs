@@ -14,9 +14,9 @@ namespace BLL
     {
         private readonly ColorDAL color;
 
-        public ColorService()
+        public ColorService(ColorDAL dAL)
         {
-            color = new ColorDAL();
+            color = dAL;
         }
 
         public async Task<List<Color>> GetColorsAsync(Expression<Func<Color, bool>> filter = null)

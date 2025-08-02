@@ -381,6 +381,8 @@ wwwroot\AdminLTE-4.0.0-rc3\tsconfig.json
 wwwroot\css\site.css
 wwwroot\css\style.css
 wwwroot\css\style.min.css
+wwwroot\img\20250726150113049.png
+wwwroot\img\20250726150358581.png
 wwwroot\img\647cad16ede10f3ac32e84c8f14831e9.jpg
 wwwroot\img\Bar-Rafaeli.jpg
 wwwroot\img\Black Jacket.jpg

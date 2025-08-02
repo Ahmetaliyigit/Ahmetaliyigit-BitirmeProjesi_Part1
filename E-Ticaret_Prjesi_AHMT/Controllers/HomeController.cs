@@ -12,12 +12,12 @@ namespace E_Ticaret_Prjesi_AHMT.Controllers
 
         public int UserId2{ get; set; } = 25;
 
-        private readonly ProductServise productservise;
+        private readonly ProductService productservise;
         
 
-        public HomeController()
+        public HomeController(ProductService product)
         {
-            productservise = new ProductServise();
+            productservise = product;
           
         }
 

@@ -1537,6 +1537,14 @@
       "PackagePath": "staticwebassets\\css\\style.min.css"
     },
     {
+      "Id": "C:\\Users\\EXCALIBUR\\source\\repos\\E-Ticaret_Prjesi_AHMT\\E-Ticaret_Prjesi_AHMT\\wwwroot\\img\\20250726150113049.png",
+      "PackagePath": "staticwebassets\\img\\20250726150113049.png"
+    },
+    {
+      "Id": "C:\\Users\\EXCALIBUR\\source\\repos\\E-Ticaret_Prjesi_AHMT\\E-Ticaret_Prjesi_AHMT\\wwwroot\\img\\20250726150358581.png",
+      "PackagePath": "staticwebassets\\img\\20250726150358581.png"
+    },
+    {
       "Id": "C:\\Users\\EXCALIBUR\\source\\repos\\E-Ticaret_Prjesi_AHMT\\E-Ticaret_Prjesi_AHMT\\wwwroot\\img\\647cad16ede10f3ac32e84c8f14831e9.jpg",
       "PackagePath": "staticwebassets\\img\\647cad16ede10f3ac32e84c8f14831e9.jpg"
     },

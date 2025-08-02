@@ -4,7 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!-- Links Start -->
     @await Component.InvokeAsync("SelectLinksViewComponentPartial");
+<!-- Links End -->
 
 <!-- Featured Start -->
     @await Component.InvokeAsync("SelectFeaturedViewComponentPartial");
@@ -19,7 +21,7 @@
 <!-- Offer End -->
 
 <!-- Products Start -->
-@await Component.InvokeAsync("SelectTop4ProductViewComponentPartial")
+    @await Component.InvokeAsync("SelectTop4ProductViewComponentPartial")
 <!-- Products End -->
 
 <!-- Subscribe Start -->

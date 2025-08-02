@@ -6,13 +6,13 @@ namespace E_Ticaret_Prjesi_AHMT.ViewComponents
 {
     public class SelectDetailColorSizeViewComponent: ViewComponent
     {
-        private readonly ProductServise servise;
+        private readonly ProductService servise;
         private readonly ColorService color;
 
-        public SelectDetailColorSizeViewComponent()
+        public SelectDetailColorSizeViewComponent(ProductService product , ColorService colorService)
         {
-            servise = new ProductServise();
-            color = new ColorService();
+            servise = product;
+            color = colorService;
         }
 
         public async Task<IViewComponentResult> InvokeAsync(int Id)

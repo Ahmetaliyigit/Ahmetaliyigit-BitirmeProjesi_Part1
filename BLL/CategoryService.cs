@@ -13,9 +13,9 @@ namespace BLL
     {
         private readonly CategoryDAL category;
 
-        public CategoryService()
+        public CategoryService(CategoryDAL dAL)
         {
-            category = new CategoryDAL();
+            category = dAL;
         }
 
         public async Task<List<Category>> GetCategoriesAsync(Expression<Func<Category, bool>> filter = null)

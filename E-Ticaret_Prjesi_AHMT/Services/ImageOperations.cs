@@ -13,7 +13,7 @@
         public static async Task<string> UploadImageAsync(IFormFile file)
         {
             string newFileName = GenerateUniqueFileName();
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\assets\\img", newFileName);
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img", newFileName);
 
             using (var stream = new FileStream(path, FileMode.Create))
             {

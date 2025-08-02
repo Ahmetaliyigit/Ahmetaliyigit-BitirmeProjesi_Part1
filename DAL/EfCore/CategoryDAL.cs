@@ -14,9 +14,9 @@ namespace DAL.EfCore
     {
         private readonly DataContext context;
 
-        public CategoryDAL()
+        public CategoryDAL(DataContext db)
         {
-            context = new DataContext();
+            context = db;
         }
 
         public async Task<List<Category>> GetCategoriesAsync(Expression<Func<Category,bool>> filter = null)
@@ -25,7 +25,7 @@ namespace DAL.EfCore
 
             if (filter != null)
             {
-                Categorys.Where(filter);
+                Categorys = Categorys.Where(filter);
             }
 
             return await Categorys.ToListAsync();

@@ -14,9 +14,9 @@ namespace DAL.EfCore
     {
         private readonly DataContext context;
 
-        public ColorDAL()
+        public ColorDAL(DataContext data)
         {
-            context = new DataContext();
+            context = data;
         }
 
         public async Task<List<Color>> GetColorsAsync(Expression<Func<Color, bool>> filter = null)

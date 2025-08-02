@@ -14,9 +14,9 @@ namespace DAL.EfCore
     {
         private readonly DataContext context;
 
-        public GenderDAL()
+        public GenderDAL(DataContext gender)
         {
-            context = new DataContext();
+            context = gender;
         }
 
         public async Task<List<Gender>> GetGendersAsync(Expression<Func<Gender,bool>> filter = null)

@@ -5,11 +5,11 @@ namespace E_Ticaret_Prjesi_AHMT.ViewComponents.Shop
 {
     public class SeiectSideBarViewComponentPartial : ViewComponent
     {
-        private readonly ProductServise productServise;
+        private readonly ProductService productServise;
 
-        public SeiectSideBarViewComponentPartial()
+        public SeiectSideBarViewComponentPartial(ProductService product)
         {
-            productServise = new ProductServise();
+            productServise = product;
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {

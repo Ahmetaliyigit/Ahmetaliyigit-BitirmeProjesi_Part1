@@ -22,8 +22,8 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"> Açıklaması </label>
-                <input asp-for="Description" class="form-control" />
+                <label asp-for="Description" class="control-label">Açıklaması</label>
+                <textarea asp-for="Description" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -49,7 +49,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Url" class="control-label"> Fotorafı </label>
-                <input type="file" class="form-control" name="ProductImage" />
+                <input asp-for="Url" type="file" class="form-control"/>
                 <span asp-validation-for="Url" class="text-danger"></span>
             </div>
             <div class="form-group">

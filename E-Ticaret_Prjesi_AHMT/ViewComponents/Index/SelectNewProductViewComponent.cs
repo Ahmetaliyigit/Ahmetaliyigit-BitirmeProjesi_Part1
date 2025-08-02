@@ -5,11 +5,11 @@ namespace E_Ticaret_Prjesi_AHMT.ViewComponents.Index
 {
     public class SelectNewProductViewComponent : ViewComponent
     {
-        private readonly ProductServise productServise;
+        private readonly ProductService productServise;
 
-        public SelectNewProductViewComponent()
+        public SelectNewProductViewComponent(ProductService product)
         {
-            productServise = new ProductServise();
+            productServise = product;
         }
 
         public async Task<IViewComponentResult> InvokeAsync()

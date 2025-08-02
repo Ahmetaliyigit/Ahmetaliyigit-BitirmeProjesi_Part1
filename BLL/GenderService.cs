@@ -12,9 +12,9 @@ namespace BLL
     public class GenderService
     {
         private readonly GenderDAL gender;
-        public GenderService()
+        public GenderService(GenderDAL dAL)
         {
-            gender = new GenderDAL();
+            gender = dAL;
         }
 
         public async Task<List<Gender>> GetGendersAsync(Expression<Func<Gender, bool>> filter = null)

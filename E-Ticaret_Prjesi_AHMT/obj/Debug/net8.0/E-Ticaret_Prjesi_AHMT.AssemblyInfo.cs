@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("E-Ticaret_Prjesi_AHMT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4deeb2d625d21a3f50411fb76d92dcddac768c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+037b30161945e881ebebd1a775953cf2eac20916")]
 [assembly: System.Reflection.AssemblyProductAttribute("E-Ticaret_Prjesi_AHMT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("E-Ticaret_Prjesi_AHMT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
